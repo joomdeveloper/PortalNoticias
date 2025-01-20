@@ -1,6 +1,21 @@
 #featured {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(180deg, transparent 0%, black 100%);
+        }
+    }
 }
